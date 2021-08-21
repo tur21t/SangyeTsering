@@ -1,0 +1,62 @@
+header {
+  background-color: rgb(53, 102, 0);
+  padding: 1px;
+  text-align: center;
+  font-size: 21px;
+  color: white;
+}
+
+
+body {
+    font-family: "Open Sans",sans-serif;
+    -webkit-font-smoothing: antialiased;
+	margin-top: 7px;
+	margin-bottom: 0px;
+	margin-right: 21px;
+	margin-left: 21px;
+    font-style: normal;
+	text-align: left;
+	font-size: 21px;
+    font-weight: 400;
+    color: rgb(110, 13, 13);
+	background-color: rgb(206, 255, 153);
+	height: 100%;
+}
+h1 {
+  text-shadow: 1px 2px;
+}
+h2 {
+  text-shadow: 1px 2px;
+}
+p {
+  margin-right: 1px;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 60%;
+   /* only for demonstration, should be removed */
+}
+aside {
+  float: right;
+  /*width: 20%;*/
+  
+}
+/* Style the footer */
+footer {
+  /*background-color: rgb(53, 102, 0);*/
+  padding: 1px;
+  text-align: center;
+  color: rgb(53, 102, 0);
+  font-size: 42px;
+  border-style: double;
+  border-color: rgb(53, 102, 0);
+}
