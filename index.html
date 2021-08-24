@@ -1,43 +1,72 @@
-<DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-<head>
-<title> CAT SANGYE TSERING </title>
-<link rel="stylesheet" href="styles.css">
-</head>
+	<head>
+		<title> CAT SANGYE TSERING </title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styles.css">
+	</head>
 
-<body>
+<body>	
+		<a href="#eng" data-reload>English</a>
+		<a href="#es" data-reload>Español</a>
+		<a href="#ukr" data-reload>Украї́нська </a>
+		
+	<header>
+		<h1 id="hi"> Welcome Dear Stranger!</h1>
+	</header>
 
-<header>
-  <h1> Welcome Dear Stranger!</h1>
-</header>
+	<section>	
+		<article>
+			<h2 id="intro1">This is <b>Sangye Tsering</b> she is a very cute and smart <a href="https://en.wikipedia.org/wiki/Cat"> cat </a>.</h2>
+			<h3 id="historyTitle">Here is some History</h3>
+			<p id="historyText"> Cats were first domesticated in the Near East around 7500 BC. 
+				It was long thought that cat domestication was initiated in ancient Egypt, as since around 3100 BC veneration was given to cats in ancient Egypt. 
+				As of 2021 there are an estimated 480 million stray and 220 million owned cats in the world and Tsering is one of them. </b>
+			<form action="/action_page.php">
+				<p>Do you have a pet?</p>
+				<input type="radio" id="catPositive" name="fav_language" value="catPositive">
+				<label for="catPositive">Yes, I do.</label><br>
+				<input type="radio" id="catNegative" name="fav_language" value="catNegative">
+				<label for="catNegative">No. At least not yet.</label><br>
+				<input type="radio" id="catMystery" name="fav_language" value="catMystery">
+				<label for="catMystery">I don't want to answer.</label>
+		</article>
+		<aside> <img src="cat02.png" height="502"> </aside>	
+	</section>
 
-<section>
-  
- 
-  <article>
-	<h2>This is <b>Sangye Tsering</b> she is a very cute and smart <a href="https://en.wikipedia.org/wiki/Cat"> cat </a>.</h2>
-	<h3>Here is some History</h3>
-	<p> Cats were first domesticated in the Near East around 7500 BC. 
-		It was long thought that cat domestication was initiated in ancient Egypt, as since around 3100 BC veneration was given to cats in ancient Egypt. 
-		As of 2021 there are an estimated 480 million stray and 220 million owned cats in the world and Tsering is one of them. </b>
-    <form action="/action_page.php">
-		<p>Do you have a pet?</p>
-		<input type="radio" id="html" name="fav_language" value="HTML">
-		<label for="html">Yes, I do.</label><br>
-		<input type="radio" id="css" name="fav_language" value="CSS">
-		<label for="css">No. At least not yet.</label><br>
-		<input type="radio" id="javascript" name="fav_language" value="JavaScript">
-		<label for="javascript">I don't want to answer.</label>
+	<footer>
+  		<p>Thank you for your attention and time :)</p>
+	</footer>
 
-  </article>
-  <aside> <img src="cat02.png" height="502"> </aside>
-  
-</section>
+	<script> 
+		// Define language reload anchors
+		var dataReload = document.querySelectorAll("[data-reload]");
 
-<footer>
-  <p>Thank you for your attention and time :)</p>
-</footer>
+		//  Language translation
+		var language = {
+			eng: {
+				welcome: "Welcome Dear Stranger!"
+			},
+			es: {
+				welcome: "¡Bienvenido querido extraño!"
+			}
+		};
+
+		// Define language via window hash
+		if (window.location.hash) {
+			if (window.location.hash === "#es") {
+				hi.textContent = language.es.welcome;
+			}
+		}	
+
+		// Define language reload onclick illiteration
+		for (i =  0;  i <= dataReload.length; i++) {
+			dataReload[i].onclick = function() {
+				location.reload(true);
+			};
+		}
+	</script>
 
 
 </body>
